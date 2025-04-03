@@ -12,7 +12,6 @@ Este es un programa en Python que permite gestionar tareas, agregarlas, eliminar
 
 ## 🦾 Integrantes del Proyecto
 
-- **Jhon Sebastian Solorzano Rojas**
 - **Diego Rojas Gonzalez** 
 
 ## Estructura
