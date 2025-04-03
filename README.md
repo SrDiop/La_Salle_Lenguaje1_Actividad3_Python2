@@ -1,14 +1,22 @@
-# 📌 Sistema de Gestión de Tareas en Python
+# ACTIVIDAD 3 - EJERCICIO 1 / Sistema de Gestión de Tareas
 
-Este es un programa en Python que permite gestionar tareas, agregarlas, eliminarlas, marcarlas como completadas y ver su estado.
+## 📏 Descripción
+El objetivo de este proyecto es crear un sistema simple de gestión de tareas donde los usuarios puedan agregar, eliminar, y ver tareas. Cada tarea tendrá un título, una descripción y un estado (pendiente o completada).
+
+## 📌 Requisitos
+- **Variables:** Para almacenar información de las tareas.
+- **Listas:** Para mantener un registro de todas las tareas.
+- **Condicionales:** Para manejar las opciones del menú y el estado de las tareas.
+- **Ciclos:** Para mostrar el menú y permitir múltiples operaciones hasta que el usuario decida salir.
 
 ## 🚀 Funcionalidades
-
-- 📝 **Agregar Tarea**: Permite agregar una nueva tarea con título y descripción.
-- ❌ **Eliminar Tarea**: Elimina una tarea seleccionada por el usuario.
-- 📋 **Ver Tareas**: Muestra todas las tareas registradas.
-- ✅ **Marcar Tarea como Completada**: Cambia el estado de una tarea a "Completada".
-- 🔚 **Salir**: Termina la ejecución del programa.
+- 📝 **Agregar Tarea:** Permite al usuario agregar una nueva tarea con un título y una descripción.
+- ❌ **Eliminar Tarea:** Permite al usuario eliminar una tarea existente.
+- 📋 **Ver Tareas:** Muestra todas las tareas con su estado.
+- ✅ **Marcar Tarea como Completada:** Permite al usuario marcar una tarea como completada.
+- **Salir:** Termina el programa.
+- 🔚 **Menú Principal:** Un ciclo que muestra las opciones disponibles y solicita la elección del usuario.
+- **Estructura del Código
 
 ## 🦾 Integrantes del Proyecto
 
