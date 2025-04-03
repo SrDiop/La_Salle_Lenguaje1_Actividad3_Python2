@@ -1,49 +1,41 @@
 # Lista para almacenar las tareas
-tareas = []
+gastos = []
 
-#Función para agregar una nueva tarea
-def agregar_tarea():
-    titulo = input("Ingrese el título de la tarea: ")
-    descripcion = input("Ingrese la descripción de la tarea: ")
-    tarea = {"titulo": titulo, "descripcion": descripcion, "estado": "Pendiente"}
-    tareas.append(tarea)
-    print("Tarea agregada correctamente.\n")
+#Función para agregar un gasto
+def agregar_gasto():
+    categoria = input("Ingrese la categoria del gasto: ")
+    descripcion = input("Ingrese la descripción del gasto: ")
+    monto = float(input("Ingrese la descripción del gasto: "))
+    gasto = {"categoria": categoria, "descripcion": descripcion, "monto": monto}
+    gastos.append(gasto)
+    print("gasto agregado correctamente.\n")
 
-#Función para mostrar todas las tareas
-def ver_tareas():
-    if not tareas:
-        print("No hay tareas registradas.\n")
+#Función para mostrar todos los gastos
+def ver_gastos():
+    if not gastos:
+        print("No hay gastos registrados.\n")
         return
-    print("\nLista de Tareas:")
-    for i, tarea in enumerate(tareas, 1):
-        print(f"{i}. {tarea['titulo']} - {tarea['descripcion']} [{tarea['estado']}]")
+    print("\nLista de Gastos:")
+    for i, gasto in enumerate(gastos, 1):
+        print(f"{i}. {gasto['categoria']} - {gasto['descripcion']} [{gasto['monto']}]")
     print("")
 
-#Función para marcar una tarea como completada
-def marcar_completada():
-    ver_tareas()
-    if not tareas:
-        return
-    try:
-        num = int(input("Ingrese el número de la tarea a marcar como completada: "))
-        if 1 <= num <= len(tareas):
-            tareas[num - 1]["estado"] = "Completada"
-            print("Tarea marcada como completada.\n")
-        else:
-            print("Número inválido.\n")
-    except ValueError:
-        print("Por favor, ingrese un número válido.\n")
+#Función para mostrar un resumen de gastos por categoria
+#def ver_resumen_categoria():
+
+#Función para calcular el total de los gastos
+#def calcular_total_gastos():
 
 #Función para eliminar una tarea
-def eliminar_tarea():
-    ver_tareas()
-    if not tareas:
+def eliminar_gasto():
+    ver_gastos()
+    if not gastos:
         return
     try:
-        num = int(input("Ingrese el número de la tarea a eliminar: "))
-        if 1 <= num <= len(tareas):
-            tarea_eliminada = tareas.pop(num - 1)
-            print(f"Tarea '{tarea_eliminada['titulo']}' eliminada.\n")
+        num = int(input("Ingrese el número del gasto a eliminar: "))
+        if 1 <= num <= len(gastos):
+            gasto_eliminada = gastos.pop(num - 1)
+            print(f"Tarea '{gasto_eliminada['categoria']}' eliminado.\n")
         else:
             print("Número inválido.\n")
     except ValueError:

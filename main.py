@@ -4,25 +4,28 @@ import funciones  # Importar las funciones desde funciones.py
 def menu():
     while True:
         print("\nMenú:")
-        print("1. Agregar tarea")
-        print("2. Ver tareas")
-        print("3. Marcar tarea como completada")
-        print("4. Eliminar tarea")
-        print("5. Salir")
+        print("1. Agregar gasto")
+        print("2. Eliminar gasto")
+        print("3. Ver gastos")
+        print("4. Ver gastos * categoria")
+        print("5. Calcular total gastos")
+        print("6. Salir")
         
 #Opcion ingresada por el Usuario        
         opcion = input("Seleccione una opción: ")
 
 #Condicional if-elif-else para determinar que funcion usar   
         if opcion == "1":
-            funciones.agregar_tarea()
+            funciones.agregar_gasto()
         elif opcion == "2":
-            funciones.ver_tareas()
+            funciones.eliminar_gasto()    
         elif opcion == "3":
-            funciones.marcar_completada()
+            funciones.ver_gastos()
         elif opcion == "4":
-            funciones.eliminar_tarea()
+            funciones.ver_resumen_categoria()
         elif opcion == "5":
+            funciones.calcular_total_gastos()
+        elif opcion == "6":
             print("Saliendo del programa...")
             break
         else:
