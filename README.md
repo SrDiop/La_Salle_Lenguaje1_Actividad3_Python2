@@ -25,18 +25,18 @@ Este es un programa en Python que permite gestionar tareas, agregarlas, eliminar
 ![Menú principal](Resources/Images_Readme/Menú.JPG)
 
 - **Agregar Tareas**
-![Agregar Tareas](Resources/Images_Readme/Agregar%20Tareas.JPG)
+![Agregar Tareas](Resources/Images_Readme/Agregar_Tareas.JPG)
 
 - **Ver Tareas**
-![Ver Tareas Lista](Resources/Images_Readme/Ver%20Tareas.JPG)
+![Ver Tareas Lista](Resources/Images_Readme/Ver_Tareas.JPG)
 
 - **Marcar Tareas Como Completadas**
-![Cambiar El Estado](Resources/Images_Readme/Tareas%20Completadas%201.JPG)
-![Cambio Evidenciado](Resources/Images_Readme/Tareas%20Completadas%202.JPG)
+![Cambiar El Estado](Resources/Images_Readme/Tareas_Completadas_1.JPG)
+![Cambio Evidenciado](Resources/Images_Readme/Tareas_Completadas_2.JPG)
 
 - **Eliminar Tareas**
-![Eliminar Tarea](Resources/Images_Readme/Eliminar%20Tareas%201.JPG)
-![Cambio Evidenciado](Resources/Images_Readme/Eliminar%20Tareas%202.JPG)
+![Eliminar Tarea](Resources/Images_Readme/Eliminar_Tareas_1.JPG)
+![Cambio Evidenciado](Resources/Images_Readme/Eliminar_Tareas_2.JPG)
 
 - **Salir Del Programa**
 ![Salir Del Programa](Resources/Images_Readme/Salir.JPG)
