@@ -26,3 +26,18 @@ Este es un programa en Python que permite gestionar tareas, agregarlas, eliminar
 
 ## Video Sustentación
 - **python main.py**
+
+## Explicacion Codigo
+
+- main.py **Tenemos la navegacion sobre el menú principal y determina cual opcion se ejecutara junto con su funcion**
+    ```python
+def menu():
+    while True:
+        print("\nMenú:")
+        print("1. Agregar tarea")
+        print("2. Ver tareas")
+        print("3. Marcar tarea como completada")
+        print("4. Eliminar tarea")
+        print("5. Salir")
+![Menú principal](Resources/Images_Readme/Menú.JPG)
+
