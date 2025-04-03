@@ -19,7 +19,7 @@ El objetivo de este proyecto es crear un sistema simple de gestión de tareas do
 - **Estructura del Código
 
 ## Estructura
-- **EJERCICIO 1**
+- **/EJERCICIO 1**
     - main.py **Archivo Principal con el menú**
     - funciones.py **Funciones del programa** 
     - README.md **Documentacipon del proyecto**
@@ -46,7 +46,7 @@ El objetivo de este proyecto es crear un sistema simple de gestión de tareas do
 ![Salir Del Programa](Resources/Images_Readme/Salir.JPG)
 
 ## Video Sustentación
-- **python main.py**
+- **[Video YouTube](https://youtu.be/3zfOrpf30SY)**
 
 ## Explicacion Codigo
 
@@ -68,7 +68,6 @@ def menu():
         print("4. Eliminar tarea")
         print("5. Salir")
 ```
-![Menú principal](Resources/Images_Readme/Menú.JPG)
 
 ### segun la informacion que ingresa el usuario vamos a enviarlo por el if-elif-else a cada una de las funciones establecidas
 ```python
@@ -86,6 +85,7 @@ if opcion == "1":
         else:
             print("Opción inválida, intente de nuevo.\n")
 ```
+
 ### Funciones
 -**Agregar Tareas**
 ```python
