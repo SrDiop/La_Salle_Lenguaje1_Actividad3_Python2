@@ -1,22 +1,30 @@
-# ACTIVIDAD 3 - EJERCICIO 1 / Sistema de Gestión de Tareas
+# ACTIVIDAD 3 - EJERCICIO 2 / Calculadora de Gastos Mensuales
 
 ## 📏 Descripción
-El objetivo de este proyecto es crear un sistema simple de gestión de tareas donde los usuarios puedan agregar, eliminar, y ver tareas. Cada tarea tendrá un título, una descripción y un estado (pendiente o completada).
+El objetivo de este proyecto es crear una calculadora que ayude a los usuarios a gestionar sus gastos mensuales. El programa permitirá al usuario ingresar diferentes tipos de gastos y calculará el total de gastos al final del mes. También podrá categorizar los gastos y mostrar un resumen por categoría.
 
 ## 📌 Requisitos
-- **Variables:** Para almacenar información de las tareas.
-- **Listas:** Para mantener un registro de todas las tareas.
-- **Condicionales:** Para manejar las opciones del menú y el estado de las tareas.
-- **Ciclos:** Para mostrar el menú y permitir múltiples operaciones hasta que el usuario decida salir.
+- **Variables:** Para almacenar información de los gastos.
+- **Listas:** Para mantener un registro de todos los gastos.
+- **Condicionales:** Para manejar las opciones del menú y las categorías de gastos.
+- **Ciclos:** Para permitir múltiples entradas de gastos y mostrar el menú hasta que el usuario decida salir.
 
 ## 🚀 Funcionalidades
-- 📝 **Agregar Tarea:** Permite al usuario agregar una nueva tarea con un título y una descripción.
-- ❌ **Eliminar Tarea:** Permite al usuario eliminar una tarea existente.
-- 📋 **Ver Tareas:** Muestra todas las tareas con su estado.
-- ✅ **Marcar Tarea como Completada:** Permite al usuario marcar una tarea como completada.
+- 📝 **Agregar Gasto:** Permite al usuario agregar un nuevo gasto con una descripción, categoría y monto.
+- ❌ **Eliminar Gasto:** Permite al usuario eliminar un gasto existente.
+- 📋 **Ver Gastos:** Muestra todos los gastos ingresados.
+- 📋 **Ver Resumen Por Categoría:** Muestra un resumen de los gastos agrupados por categoría.
+- ✅ **Calcular Total De Gastos:** Calcula y muestra el total de todos los gastos ingresados.
 - **Salir:** Termina el programa.
 - 🔚 **Menú Principal:** Un ciclo que muestra las opciones disponibles y solicita la elección del usuario.
 - **Estructura del Código
+
+## ⚡ Funciones
+- 📝 **agregar_gasto():** Para agregar un nuevo gasto.
+- ❌ **eliminar_gasto():** Para eliminar un gasto existente.
+- 📋 **ver_gastos():** Para mostrar todos los gastos.
+- 📋 **ver_resumen_categoria():** Para mostrar un resumen de los gastos por categoría.
+- ✅ **calcular_total_gastos():** Para calcular el total de los gastos.
 
 ## Estructura
 - **/EJERCICIO 1**
