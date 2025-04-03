@@ -12,16 +12,34 @@ Este es un programa en Python que permite gestionar tareas, agregarlas, eliminar
 
 ## 🦾 Integrantes del Proyecto
 
-- **Diego Rojas Gonzalez** 
+- **Diego Rojas Gonzalez**  
 
 ## Estructura
-- EJERCICIO 1
+- **EJERCICIO 1**
     - main.py **Archivo Principal con el menú**
     - funciones.py **Funciones del programa** 
     - README.md **Documentacipon del proyecto**
 
 ## Ejecuion
-- **python main.py**
+- **Menú**
+![Menú principal](Resources/Images_Readme/Menú.JPG)
+
+- **Agregar Tareas**
+![Agregar Tareas](Resources/Images_Readme/Agregar%20Tareas.JPG)
+
+- **Ver Tareas**
+![Ver Tareas Lista](Resources/Images_Readme/Ver%20Tareas.JPG)
+
+- **Marcar Tareas Como Completadas**
+![Cambiar El Estado](Resources/Images_Readme/Tareas%20Completadas%201.JPG)
+![Cambio Evidenciado](Resources/Images_Readme/Tareas%20Completadas%202.JPG)
+
+- **Eliminar Tareas**
+![Eliminar Tarea](Resources/Images_Readme/Eliminar%20Tareas%201.JPG)
+![Cambio Evidenciado](Resources/Images_Readme/Eliminar%20Tareas%202.JPG)
+
+- **Salir Del Programa**
+![Salir Del Programa](Resources/Images_Readme/Salir.JPG)
 
 ## Video Sustentación
 - **python main.py**
