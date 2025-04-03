@@ -18,10 +18,6 @@ El objetivo de este proyecto es crear un sistema simple de gestión de tareas do
 - 🔚 **Menú Principal:** Un ciclo que muestra las opciones disponibles y solicita la elección del usuario.
 - **Estructura del Código
 
-## 🦾 Integrantes del Proyecto
-
-- **Diego Rojas Gonzalez**  
-
 ## Estructura
 - **EJERCICIO 1**
     - main.py **Archivo Principal con el menú**
