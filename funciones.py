@@ -5,7 +5,7 @@ gastos = []
 def agregar_gasto():
     categoria = input("Ingrese la categoria del gasto: ")
     descripcion = input("Ingrese la descripción del gasto: ")
-    monto = float(input("Ingrese la descripción del gasto: "))
+    monto = float(input("Ingrese el monto del gasto: "))
     gasto = {"categoria": categoria, "descripcion": descripcion, "monto": monto}
     gastos.append(gasto)
     print("gasto agregado correctamente.\n")
@@ -21,10 +21,32 @@ def ver_gastos():
     print("")
 
 #Función para mostrar un resumen de gastos por categoria
-#def ver_resumen_categoria():
+def ver_resumen_categoria():
+    resumen={}
+
+    if not gastos:
+        print("No hay gastos registrados.\n")
+        return
+    for gasto in gastos:
+        categoria = gasto['categoria']
+        monto = gasto['monto']
+        if categoria in resumen:
+            resumen[categoria] += monto
+        else:
+            resumen[categoria] = monto
+    print("\n Resumen de gastos por categoría:")
+    for categoria, total in resumen.items():
+        print(f"- {categoria}: ${total:.2f}")
+    print()
 
 #Función para calcular el total de los gastos
-#def calcular_total_gastos():
+def calcular_total_gastos():
+
+    if not gastos:
+        print("No hay gastos registrados.\n")
+        return
+    total = sum(gasto['monto'] for gasto in gastos)
+    print(f"\n Total de gastos del mes: ${total:.2f}\n")
 
 #Función para eliminar una tarea
 def eliminar_gasto():
@@ -35,7 +57,7 @@ def eliminar_gasto():
         num = int(input("Ingrese el número del gasto a eliminar: "))
         if 1 <= num <= len(gastos):
             gasto_eliminada = gastos.pop(num - 1)
-            print(f"Tarea '{gasto_eliminada['categoria']}' eliminado.\n")
+            print(f"Gasto '{gasto_eliminada['categoria']}' eliminado.\n")
         else:
             print("Número inválido.\n")
     except ValueError:
