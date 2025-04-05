@@ -36,25 +36,27 @@ El objetivo de este proyecto es crear una calculadora que ayude a los usuarios a
 - **Menú**
 ![Menú principal](Resources/Images_Readme/Menú.JPG)
 
-- **Agregar Tareas**
-![Agregar Tareas](Resources/Images_Readme/Agregar_Tareas.JPG)
+- **Agregar Gastos**
+![Agregar Gastos](Resources/Images_Readme/Agregar_Gastos.JPG)
 
-- **Ver Tareas**
-![Ver Tareas Lista](Resources/Images_Readme/Ver_Tareas.JPG)
+- **Eliminar Gastos**
+![Eliminar Gastos](Resources/Images_Readme/Eliminar_Gastos_1.JPG)
+![Cambio Evidenciado](Resources/Images_Readme/Eliminar_Gastos_2.JPG)
 
-- **Marcar Tareas Como Completadas**
-![Cambiar El Estado](Resources/Images_Readme/Tareas_Completadas_1.JPG)
-![Cambio Evidenciado](Resources/Images_Readme/Tareas_Completadas_2.JPG)
+- **Ver Gastos**
+![Ver Gastos](Resources/Images_Readme/Ver_Gastos.JPG)
 
-- **Eliminar Tareas**
-![Eliminar Tarea](Resources/Images_Readme/Eliminar_Tareas_1.JPG)
-![Cambio Evidenciado](Resources/Images_Readme/Eliminar_Tareas_2.JPG)
+- **Ver Gastos Por Categoria**
+![Ver Gastos Por Categoria](Resources/Images_Readme/Gastos_Categoria.JPG)
+
+- **Gastos Total**
+![Gastos Total](Resources/Images_Readme/Gastos_Total.JPG)
 
 - **Salir Del Programa**
 ![Salir Del Programa](Resources/Images_Readme/Salir.JPG)
 
 ## Video Sustentación
-- **[Video YouTube](https://youtu.be/3zfOrpf30SY)**
+- **[Video YouTube](https://)**
 
 ## Explicacion Codigo
 
@@ -70,24 +72,32 @@ import funciones
 def menu():
     while True:
         print("\nMenú:")
-        print("1. Agregar tarea")
-        print("2. Ver tareas")
-        print("3. Marcar tarea como completada")
-        print("4. Eliminar tarea")
-        print("5. Salir")
+        print("1. Agregar gasto")
+        print("2. Eliminar gasto")
+        print("3. Ver gastos")
+        print("4. Ver gastos * categoria")
+        print("5. Calcular total gastos")
+        print("6. Salir")
 ```
 
-### segun la informacion que ingresa el usuario vamos a enviarlo por el if-elif-else a cada una de las funciones establecidas
+### El usuario ingresa la opcion que necesita procesar desde el input.
+```python
+opcion = input("Seleccione una opción: ")
+```
+
+### Segun el valor ingresado lo iteramos desde el if-elif-else a cada una de las funciones correspondientemente.
 ```python
 if opcion == "1":
-            funciones.agregar_tarea()
+            funciones.agregar_gasto()
         elif opcion == "2":
-            funciones.ver_tareas()
+            funciones.eliminar_gasto()    
         elif opcion == "3":
-            funciones.marcar_completada()
+            funciones.ver_gastos()
         elif opcion == "4":
-            funciones.eliminar_tarea()
+            funciones.ver_resumen_categoria()
         elif opcion == "5":
+            funciones.calcular_total_gastos()
+        elif opcion == "6":
             print("Saliendo del programa...")
             break
         else:
@@ -95,58 +105,74 @@ if opcion == "1":
 ```
 
 ### Funciones
--**Agregar Tareas**
+-**Agregar Gasto**
 ```python
-def agregar_tarea():
-    titulo = input("Ingrese el título de la tarea: ")
-    descripcion = input("Ingrese la descripción de la tarea: ")
-    tarea = {"titulo": titulo, "descripcion": descripcion, "estado": "Pendiente"}
-    tareas.append(tarea)
-    print("Tarea agregada correctamente.\n")
+def agregar_gasto():
+    categoria = input("Ingrese la categoria del gasto: ")
+    descripcion = input("Ingrese la descripción del gasto: ")
+    monto = float(input("Ingrese el monto del gasto: "))
+    gasto = {"categoria": categoria, "descripcion": descripcion, "monto": monto}
+    gastos.append(gasto)
+    print("gasto agregado correctamente.\n")
 ```
 
--**Ver Tareas**
+-**Eliminar Gastos**
 ```python
-def ver_tareas():
-    if not tareas:
-        print("No hay tareas registradas.\n")
+def eliminar_gasto():
+    ver_gastos()
+    if not gastos:
         return
-    print("\nLista de Tareas:")
-    for i, tarea in enumerate(tareas, 1):
-        print(f"{i}. {tarea['titulo']} - {tarea['descripcion']} [{tarea['estado']}]")
+    try:
+        num = int(input("Ingrese el número del gasto a eliminar: "))
+        if 1 <= num <= len(gastos):
+            gasto_eliminada = gastos.pop(num - 1)
+            print(f"Gasto '{gasto_eliminada['categoria']}' eliminado.\n")
+        else:
+            print("Número inválido.\n")
+    except ValueError:
+        print("Por favor, ingrese un número válido.\n")
+```
+
+-**Ver Gastos**
+```python
+def ver_gastos():
+    if not gastos:
+        print("No hay gastos registrados.\n")
+        return
+    print("\nLista de Gastos:")
+    for i, gasto in enumerate(gastos, 1):
+        print(f"{i}. {gasto['categoria']} - {gasto['descripcion']} [{gasto['monto']}]")
     print("")
 ```
 
--**Marcar Tareas Como Completadas**
+-**Ver Resumen De Gastos Por Categoria**
 ```python
-def marcar_completada():
-    ver_tareas()
-    if not tareas:
+def ver_resumen_categoria():
+    resumen={}
+
+    if not gastos:
+        print("No hay gastos registrados.\n")
         return
-    try:
-        num = int(input("Ingrese el número de la tarea a marcar como completada: "))
-        if 1 <= num <= len(tareas):
-            tareas[num - 1]["estado"] = "Completada"
-            print("Tarea marcada como completada.\n")
+    for gasto in gastos:
+        categoria = gasto['categoria']
+        monto = gasto['monto']
+        if categoria in resumen:
+            resumen[categoria] += monto
         else:
-            print("Número inválido.\n")
-    except ValueError:
-        print("Por favor, ingrese un número válido.\n")
+            resumen[categoria] = monto
+    print("\n Resumen de gastos por categoría:")
+    for categoria, total in resumen.items():
+        print(f"- {categoria}: ${total:.2f}")
+    print()
 ```
 
--**Eliminar Tareas**
+-**Calcular Total De Los Gastos**
 ```python
-def eliminar_tarea():
-    ver_tareas()
-    if not tareas:
+def calcular_total_gastos():
+
+    if not gastos:
+        print("No hay gastos registrados.\n")
         return
-    try:
-        num = int(input("Ingrese el número de la tarea a eliminar: "))
-        if 1 <= num <= len(tareas):
-            tarea_eliminada = tareas.pop(num - 1)
-            print(f"Tarea '{tarea_eliminada['titulo']}' eliminada.\n")
-        else:
-            print("Número inválido.\n")
-    except ValueError:
-        print("Por favor, ingrese un número válido.\n")
+    total = sum(gasto['monto'] for gasto in gastos)
+    print(f"\n Total de gastos del mes: ${total:.2f}\n")
 ```

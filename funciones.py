@@ -10,6 +10,21 @@ def agregar_gasto():
     gastos.append(gasto)
     print("gasto agregado correctamente.\n")
 
+#Función para eliminar una tarea
+def eliminar_gasto():
+    ver_gastos()
+    if not gastos:
+        return
+    try:
+        num = int(input("Ingrese el número del gasto a eliminar: "))
+        if 1 <= num <= len(gastos):
+            gasto_eliminada = gastos.pop(num - 1)
+            print(f"Gasto '{gasto_eliminada['categoria']}' eliminado.\n")
+        else:
+            print("Número inválido.\n")
+    except ValueError:
+        print("Por favor, ingrese un número válido.\n")
+
 #Función para mostrar todos los gastos
 def ver_gastos():
     if not gastos:
@@ -47,18 +62,3 @@ def calcular_total_gastos():
         return
     total = sum(gasto['monto'] for gasto in gastos)
     print(f"\n Total de gastos del mes: ${total:.2f}\n")
-
-#Función para eliminar una tarea
-def eliminar_gasto():
-    ver_gastos()
-    if not gastos:
-        return
-    try:
-        num = int(input("Ingrese el número del gasto a eliminar: "))
-        if 1 <= num <= len(gastos):
-            gasto_eliminada = gastos.pop(num - 1)
-            print(f"Gasto '{gasto_eliminada['categoria']}' eliminado.\n")
-        else:
-            print("Número inválido.\n")
-    except ValueError:
-        print("Por favor, ingrese un número válido.\n")
